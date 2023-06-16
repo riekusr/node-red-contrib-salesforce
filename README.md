@@ -8,4 +8,4 @@ This module leverages the [jsforce](https://jsforce.github.io/) client library t
 
 ## Credits
 
-The package is developed and maintained by [Alpine Code](https://www.alpine-code.com/).
+The package is originally  developed and maintained by [Alpine Code](https://www.alpine-code.com/).

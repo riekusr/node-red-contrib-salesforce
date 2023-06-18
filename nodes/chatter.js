@@ -17,6 +17,7 @@ module.exports = function (RED) {
       node.on('input', function (msg) {
 
         node.path = msg.path || config.path;
+        node.query = msg.query || config.query; 
         node.operation = msg.operation || config.operation;
 
         status.info(node, "processing");
@@ -40,7 +41,7 @@ module.exports = function (RED) {
 
             case 'retrieve':
               //msg.payload = salesforceHelper.convType(msg.payload, 'object');
-              conn.chatter.resource(node.path).retrieve(node.sendMsg);
+              conn.chatter.resource(node.path, node.query? { q: node.query } : null).retrieve(node.sendMsg);
               break;
 
             case 'create':

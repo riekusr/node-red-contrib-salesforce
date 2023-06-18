@@ -1,5 +1,5 @@
 {
-  "name": "@riekusr/node-red-contrib-salesforce",
+  "name": "@riekusr-dev/node-red-contrib-salesforce",
   "version": "1.1.4",
   "description": "Salesforce for Node-RED ",
   "main": "index.js",
@@ -40,11 +40,11 @@
   },
   "node-red": {
     "nodes": {
-      "salesforce-config": "src/config.js",
-      "salesforce-operation": "src/operation.js",
-      "salesforce-apex": "src/apex.js",
-      "salesforce-chatter": "src/chatter.js",
-      "salesforce-stream": "src/stream.js"
+      "salesforce-config": "nodes/config.js",
+      "salesforce-operation": "nodes/operation.js",
+      "salesforce-apex": "nodes/apex.js",
+      "salesforce-chatter": "nodes/chatter.js",
+      "salesforce-stream": "nodes/stream.js"
     }
   },
   "jest": {
@@ -62,7 +62,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.js": [
+    "nodes/**/*.js": [
       "prettier --write",
       "git add"
     ]

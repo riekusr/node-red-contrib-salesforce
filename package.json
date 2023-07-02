@@ -44,7 +44,8 @@
       "salesforce-operation": "nodes/operation.js",
       "salesforce-apex": "nodes/apex.js",
       "salesforce-chatter": "nodes/chatter.js",
-      "salesforce-stream": "nodes/stream.js"
+      "salesforce-stream": "nodes/stream.js",
+      "salesforce-startFlow": "nodes/start-flow.js"
     }
   },
   "jest": {
@@ -62,7 +63,7 @@
     }
   },
   "lint-staged": {
-    "nodes/**/*.js": [
+    "---------nodes/**/*.js": [
       "prettier --write",
       "git add"
     ]

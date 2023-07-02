@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('salesforce-startFlow', {
+      category: 'salesforce',
+      color: "#fff",
+      defaults: {
+        salesforce: { type: 'salesforce-config', required: true },
+        flowName: { value: '' }
+      },
+      inputs: 1,
+      outputs: 1,
+      icon: 'salesforce.png',
+      label: function () {
+        var forceNode = RED.nodes.node(this.force);
+        return this.name || 'Salesforce Start Flow';
+      },
+      labelStyle: function () {
+        return this.name ? 'node_label_italic' : '';
+      },
+      paletteLabel: 'start flow',
+
+
+    });
+  </script>
+
+  <script type="text/x-red" data-template-name="salesforce-startFlow">
+    <div class="form-row">
+        <label for="node-input-salesforce"><i class="fa fa-user"></i> User</label>
+        <input type="text" id="node-input-salesforce">
+      </div>
+
+    <div class="form-row">
+      <label for="node-input-flowName"><i class="fa fa-user"></i> Flow name (api name)</label>
+      <input type="text" id="node-input-flowName">
+    </div>
+
+    <div class="form-row">
+      <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+      <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+  </script>
+  
+  <script type="text/x-red" data-help-name="salesforce-startFlow" data-lang="en-US">
+      <p>TESSTERRRR - This node is for utilizing the chatter API</p>
+      <h1>Retrieve</h1>
+      <h3>Path</h3>
+      <p>This is the chatter endpoint, /services/data/vXX.0/chatter/<code>Path</code><p>
+      <h1>Query</h1>
+      <p>*Optional - If endpoint support a search (query) string<p>
+      <p>Values can be set inside the node or left empty and send as msg.path,  msg.query</p>
+      </br>
+      <h1>Create</h1>
+      Path is the endpoint, msg is the POST body
+  </script>
